@@ -1,0 +1,38 @@
+<div class="container my-5 d-flex flex-wrap">
+  <div class="col-md-3 col-sm-6 col-12 px-3 my-3" *ngFor="let record of products">
+      <p-card>
+        <div class="row">
+          <div class="col-12">
+            <img [src]="record.productImageUrl" />
+          </div>
+        </div>
+        <div class="detail-wrapper">
+        <div class="detail-record">
+          <div class="col-12">
+            <p class="description-detail" [pTooltip]="record.productName">{{ record.productName }}</p>
+          </div>
+        </div>
+        
+          <div class="detail-record" *ngFor="let product of record.properties">
+            <div class="col-3">
+              <p [ngStyle]="{color: product.propColor}">{{ product.value }}</p>
+            </div>
+            <div class="col-9 detail-value">
+              <p class="text-right">{{ product.propName }}</p> <img [src]="product.propIcon" />
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div
+              class="col-12"
+            >
+              
+              <button class="price-btn">{{ record.price }}</button>
+            </div>
+            
+          </div>
+        </div>
+      </p-card>
+  </div>
+</div>

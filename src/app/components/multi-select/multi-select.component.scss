@@ -1,0 +1,27 @@
+:host{
+    ::ng-deep{
+        .p-multiselect{
+            border: 1px solid #EBEBEB;
+            height: 40px;
+            width: 100%;
+        }
+        .p-multiselect.p-multiselect-chip .p-multiselect-token{
+            background: #EBEBEB;
+            border-radius: 50px;
+            color: #333333;
+            padding: 0 8px;
+        
+        }
+        .p-multiselect.p-multiselect-chip .p-multiselect-token .p-multiselect-token-icon{
+            color: #707070;
+        }
+    }
+    label{
+        color: #707070;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 9px 0 4px 0;
+    }
+    
+   
+}

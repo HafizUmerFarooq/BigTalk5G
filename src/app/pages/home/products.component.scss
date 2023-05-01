@@ -1,0 +1,16 @@
+.logo{
+    width: 88px;
+    height: 88px;
+    display: block;
+    margin: 32px auto 12px;
+}
+.p-dialog{
+    height: calc(100vh - 60px) !important;
+}
+:host{
+    ::ng-deep{
+        .p-dialog{
+            height: calc(100vh - 60px) !important;
+        }
+    }
+}

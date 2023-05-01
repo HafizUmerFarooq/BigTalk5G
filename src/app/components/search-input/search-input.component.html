@@ -1,0 +1,18 @@
+<div class="d-flex flex-column align-items-center">
+  <p class="partner">
+    Partner<span style="color: red"> (new/frozen/deleted)</span>
+  </p>
+  
+ <div class="filters">
+    <img src="../../../assets/svg/fi-rr-filter (1).svg" (click)="filterEvent()" />
+  <span class="p-input-icon-left">
+    
+    <i class="pi pi-search"></i>
+    <input type="text" pInputText placeholder="Product search" />
+  </span>
+</div>
+  <div class="d-flex align-items-center filter-chips">
+    <p style="color: red">Cleaning filters</p>
+    <p-chips [(ngModel)]="values"></p-chips>
+  </div>
+</div>

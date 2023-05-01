@@ -1,0 +1,42 @@
+<div class="filter-icon">
+    <img src="../../../assets/svg/fi-rr-filter (2).svg"/>
+</div>
+<p class="filter-title">Filters</p>
+
+<div class="d-flex align-items-center justify-content-between mb-5">
+    <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+    <label>Show manual products only</label>
+</div>
+
+<div>
+    <label>Price</label>
+    <p-slider [(ngModel)]="value" [step]="20" [range]="true"></p-slider>
+</div>
+
+<div>
+    <app-multi-select [label]="'Giga Galisha'" [cities]="multiSelectOptions"></app-multi-select>
+</div>
+
+<div>
+    <app-multi-select [label]="'Minutes of conversation'" [cities]="multiSelectOptions"></app-multi-select>
+</div>
+
+<div>
+    <app-multi-select [label]="'SMS'" [cities]="multiSelectOptions"></app-multi-select>
+</div>
+
+<div>
+    <app-multi-select [label]="'validity'" [cities]="multiSelectOptions"></app-multi-select>
+</div>
+
+<div>
+    <app-multi-select [label]="'label'" [cities]="multiSelectOptions"></app-multi-select>
+</div>
+
+<div>
+    <app-multi-select [label]="'label'" [cities]="multiSelectOptions"></app-multi-select>
+</div>
+
+<button class="filtering-btn">
+    Filtering
+</button>

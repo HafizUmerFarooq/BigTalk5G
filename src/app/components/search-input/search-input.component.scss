@@ -1,0 +1,46 @@
+.partner{
+    color: #333333;
+    font-size: 24px;
+    text-align: center;
+    span{
+        color: #EB4949
+    }
+}
+.filters{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+.p-input-icon-left > .p-inputtext{
+    width: 472px;
+height: 40px;
+/* UI Properties */
+border: 1px solid #EBEBEB;
+}
+.clear-filter{
+    color: #EB4949;
+}
+.filter-chips{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    p{
+        margin: 0;
+    }
+}
+:host{
+    ::ng-deep{
+        .p-inputtext{
+            border: 0;
+        }
+        .p-chips .p-chips-multiple-container .p-chips-token{
+            background: #EBEBEB;
+            color: #333333;
+            height: 24px;
+            padding: 8px;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+    }
+}
