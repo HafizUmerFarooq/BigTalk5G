@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./filter-product.component.scss']
 })
 export class FilterProductComponent {
-  value: number[] = [20, 80];
+  value: number[] = [20, 40];
   checked:boolean = false;
   public multiSelectOptions:any[] = [
     {name: 'New York', code: 'NY'},
