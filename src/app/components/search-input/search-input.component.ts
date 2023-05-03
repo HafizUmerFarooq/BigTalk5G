@@ -28,4 +28,8 @@ export class SearchInputComponent {
     // });
   }
 
+  clearFilterEvent(){
+    this.values = [];
+  }
+
 }

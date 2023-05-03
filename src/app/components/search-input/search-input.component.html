@@ -8,11 +8,11 @@
   <span class="p-input-icon-left">
     
     <i class="pi pi-search"></i>
-    <input type="text" pInputText placeholder="Product search" />
+    <input type="text" pInputText placeholder="Product search"/>
   </span>
 </div>
   <div class="d-flex align-items-center filter-chips">
-    <p style="color: red">Cleaning filters</p>
-    <p-chips [(ngModel)]="values"></p-chips>
-  </div>
+    <p style="color: red" (click)="clearFilterEvent()">Cleaning filters</p>
+    <p-chip *ngFor="let label of values" [label]="label" [removable]="true"></p-chip>
+</div>
 </div>

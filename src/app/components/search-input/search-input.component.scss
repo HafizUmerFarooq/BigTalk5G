@@ -44,3 +44,11 @@ border: 1px solid #EBEBEB;
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+    .filters{
+        width: 4% !important;
+        float: left;
+        margin-left: -214px;
+    }
+  }

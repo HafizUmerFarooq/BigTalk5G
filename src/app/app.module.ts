@@ -14,6 +14,7 @@ import { SliderModule } from 'primeng/slider';
 import { FormsModule } from '@angular/forms';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ChipsModule } from 'primeng/chips';
+import { ChipModule } from 'primeng/chip';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { MultiSelectComponent } from './components/multi-select/multi-select.component';
 import { TooltipModule } from 'primeng/tooltip';
@@ -37,7 +38,8 @@ import { TooltipModule } from 'primeng/tooltip';
     MultiSelectModule,
     ChipsModule,
     InputSwitchModule,
-    TooltipModule
+    TooltipModule,
+    ChipModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [DialogService],

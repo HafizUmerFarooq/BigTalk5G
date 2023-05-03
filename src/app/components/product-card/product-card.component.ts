@@ -8,4 +8,8 @@ import { IProducts } from 'src/app/models/products.model';
 })
 export class ProductCardComponent {
   @Input() products: IProducts[] = [];
+
+  productClickEvent(record:IProducts){
+    console.log('record: ', record);
+  }
 }

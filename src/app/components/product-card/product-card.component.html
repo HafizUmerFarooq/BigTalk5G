@@ -1,9 +1,9 @@
 <div class="container my-5 d-flex flex-wrap">
   <div class="col-md-3 col-sm-6 col-12 px-3 my-3" *ngFor="let record of products">
-      <p-card>
-        <div class="row">
-          <div class="col-12">
-            <img [src]="record.productImageUrl" />
+      <p-card (click)="productClickEvent(record)">
+        <div class="row" style="pointer-events: auto;">
+          <div class="col-12 col-md-12 col-sm-12">
+            <img [src]="record.productImageUrl" class="w-100"/>
           </div>
         </div>
         <div class="detail-wrapper">
@@ -14,7 +14,7 @@
         </div>
         
           <div class="detail-record" *ngFor="let product of record.properties">
-            <div class="col-3">
+            <div class="col-3 detail-value">
               <p [ngStyle]="{color: product.propColor}">{{ product.value }}</p>
             </div>
             <div class="col-9 detail-value">
@@ -28,7 +28,7 @@
               class="col-12"
             >
               
-              <button class="price-btn">{{ record.price }}</button>
+              <button class="price-btn" (click)="productClickEvent(record)">{{ record.price }}</button>
             </div>
             
           </div>
