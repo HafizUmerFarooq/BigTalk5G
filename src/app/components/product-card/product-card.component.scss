@@ -82,6 +82,8 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: none;
+            max-height: 290px;
+            max-width: 160px;
         }
         .p-card .p-card-content{
             padding: 0;
@@ -96,6 +98,13 @@
         }
     }
 }
+
+@media screen and (max-width: 567px) {
+    .product-card {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
 
   
