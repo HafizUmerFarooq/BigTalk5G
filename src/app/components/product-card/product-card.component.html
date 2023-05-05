@@ -1,5 +1,5 @@
 <div class="container my-5 d-flex flex-wrap">
-  <div class="col-lg-2 col-md-3 col-sm-6 col-12 px-3 my-3 product-card" *ngFor="let record of products">
+  <div class="col-lg-2 col-md-3 col-sm-6 col-12 px-2 my-3 product-card" *ngFor="let record of products">
       <p-card (click)="productClickEvent(record)">
         <div class="row" style="pointer-events: auto;">
           <div class="col-12 col-md-12 col-sm-12">
@@ -14,10 +14,10 @@
         </div>
         
           <div class="detail-record" *ngFor="let product of record.properties">
-            <div class="col-3 detail-value">
+            <div class="col-8 detail-value">
               <p [ngStyle]="{color: product.propColor}">{{ product.value }}</p>
             </div>
-            <div class="col-9 detail-value">
+            <div class="col-4 detail-value">
               <p class="text-right">{{ product.propName }}</p> <img [src]="product.propIcon" />
             </div>
 
