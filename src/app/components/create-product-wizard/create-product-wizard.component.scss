@@ -1,0 +1,95 @@
+.description input {
+  width: 100%;
+  padding-left: 50px;
+}
+
+.freeText input{
+  padding-left: 50px;
+}
+
+.sms input{
+  padding-left: 50px;
+}
+
+.surfing input{
+  padding-left: 50px;
+}
+
+.description img {
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 13px;
+}
+
+.submit-btn input {
+  border: 1px solid #005675;
+  color: #005675;
+}
+
+.freeText img {
+  position: absolute;
+  margin-top: 35px;
+  margin-left: -45px;
+}
+
+.sms img {
+  position: absolute;
+  margin-top: 35px;
+  margin-left: -15px;
+}
+
+.surfing img {
+  position: absolute;
+  margin-top: 35px;
+  margin-left: -30px;
+}
+
+.info-row input {
+  width: 100%;
+}
+
+.sms-position{
+left: 728;
+}
+
+.language {
+  top: 392px;
+ // left: 530px;
+  width: 88px;
+  height: 130px;
+  /* UI Properties */
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 8px;
+  opacity: 1;
+  position: absolute;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: #005675;
+  font-weight: bold;
+}
+
+:host {
+  ::ng-deep {
+    p-chips .p-component {
+      width: 100%;
+    }
+    p-chips .p-component ul {
+      width: 100%;
+    }
+    p-dropdown .p-dropdown {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .sms-position{
+    top: 463px;
+  }
+  .surfing-language{
+    top: 530px !important;
+  }
+}

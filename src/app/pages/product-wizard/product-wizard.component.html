@@ -1,0 +1,32 @@
+<div class="container">
+  <!-- Logo and title -->
+  <app-logo
+    [imageUrl]="'../../../assets/images/th.jpg'"
+    [showBigTitle]="false"
+    [title]="'מוצר חדש'"
+  ></app-logo>
+
+  <div class="row mt-5">
+    <div class="col-3"></div>
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <p-card>
+        <!-- wizard counting steps -->
+        <div class="row">
+          <div class="col-12">
+            <app-wizard-steps [stepList]="stepList"></app-wizard-steps>
+            <p class="my-3" style="margin-left: 15px"><b>Product Details</b></p>
+          </div>
+        </div>
+        <!-- form of product wizard -->
+        <div class="row">
+          <div class="col-12">
+            <app-create-product-wizard
+              (saveProductForm)="saveProductForm($event)"
+            ></app-create-product-wizard>
+          </div>
+        </div>
+      </p-card>
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>

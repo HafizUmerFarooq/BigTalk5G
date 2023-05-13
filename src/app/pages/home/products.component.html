@@ -1,10 +1,11 @@
 <div class="d-flex flex-column justify-content-center align-items-center">
-    <a href="#" class="logo">
-        <img width="88" src="../../../assets/images/th.jpg"/>
-    </a>
+  <app-logo
+    [imageUrl]="'../../../assets/images/th.jpg'"
+    [title]="'מוצר חדש'"
+  ></app-logo>
 
-<!-- apply different filters -->
-<app-search-input></app-search-input>
+  <!-- apply different filters -->
+  <app-search-input></app-search-input>
 </div>
 <!-- all products cards -->
 <app-product-card [products]="productRecords"></app-product-card>
