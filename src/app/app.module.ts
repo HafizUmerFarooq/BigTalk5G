@@ -18,6 +18,7 @@ import { ChipModule } from 'primeng/chip';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { MultiSelectComponent } from './components/multi-select/multi-select.component';
 import { TooltipModule } from 'primeng/tooltip';
+import { KeysPipe } from './keys.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TooltipModule } from 'primeng/tooltip';
     ProductCardComponent,
     SearchInputComponent,
     FilterProductComponent,
-    MultiSelectComponent
+    MultiSelectComponent,
+    KeysPipe
   ],
   imports: [
     BrowserModule,

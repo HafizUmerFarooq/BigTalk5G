@@ -8,7 +8,8 @@ import { FilterProductComponent } from '../filter-product/filter-product.compone
   styleUrls: ['./search-input.component.scss']
 })
 export class SearchInputComponent {
-  values: string[] = ["text","text 2"];
+  filters: any[] = [];
+
 
   constructor(
     public dialogService: DialogService,
@@ -18,18 +19,22 @@ export class SearchInputComponent {
     const ref = this.dialogService.open(FilterProductComponent, {
       width: "20%",
       height: "30%",
-      data: { },
+      data: {filters:this.filters},
     });
 
-    // ref.onClose.subscribe((res) => {
-    //   if (res) {
-        
-    //   }
-    // });
+    ref.onClose.subscribe((res) => {
+      if (res) {
+        this.filters = res
+      }
+    });
   }
 
-  clearFilterEvent(){
-    this.values = [];
+  clearFilterEvent() {
+    this.filters = [];
+  }
+
+  onChipRemove(item: any) {
+    delete this.filters[item]
   }
 
 }

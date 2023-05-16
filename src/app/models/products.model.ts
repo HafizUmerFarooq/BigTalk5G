@@ -7,9 +7,10 @@ export interface IProducts{
 }
 
 export interface IProductsProps{
-    propId: number;
+    propId?: number;
     propName: string;
-    propIcon: string;
-    propColor: string;
-    value: number;
+    selectOptions?:any[];
+    propIcon?: string;
+    propColor?: string;
+    value?: number;
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-multi-select',
@@ -7,6 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class MultiSelectComponent {
   @Input() label:string = '';
-  selectedCities: any[] = [{name: 'New York', code: 'NY'}];
-  @Input() cities: any[] = [];
+  @Input() selectedValues: any[] = [];
+  @Input() options: any[] = [];
+  @Output() selectedValuesChange: EventEmitter< {label: string, selectedValues: any[] }> = new EventEmitter< {label: string, selectedValues: any[]} >();
+  
+  onSelectionChange() {
+    this.selectedValuesChange.emit( {label: this.label, selectedValues: this.selectedValues });
+  }
 }
