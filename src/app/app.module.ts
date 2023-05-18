@@ -18,6 +18,9 @@ import { ChipModule } from 'primeng/chip';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { MultiSelectComponent } from './components/multi-select/multi-select.component';
 import { TooltipModule } from 'primeng/tooltip';
+
+import { KeysPipe } from './keys.pipe';
+
 import { LogoComponent } from './shared/logo/logo.component';
 import { WizardStepsComponent } from './shared/wizard-steps/wizard-steps.component';
 import { StepsModule } from 'primeng/steps';
@@ -25,6 +28,7 @@ import { MessageService } from 'primeng/api';
 import { ProductWizardComponent } from './pages/product-wizard/product-wizard.component';
 import { CreateProductWizardComponent } from './components/create-product-wizard/create-product-wizard.component';
 import { DropdownModule } from 'primeng/dropdown';
+
 
 @NgModule({
   declarations: [
@@ -34,10 +38,14 @@ import { DropdownModule } from 'primeng/dropdown';
     SearchInputComponent,
     FilterProductComponent,
     MultiSelectComponent,
+
+    KeysPipe
+
     LogoComponent,
     WizardStepsComponent,
     ProductWizardComponent,
     CreateProductWizardComponent
+
   ],
   imports: [
     BrowserModule,

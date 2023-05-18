@@ -1,4 +1,6 @@
 <div class="d-flex flex-column">
     <label>{{label}}</label>
-    <p-multiSelect [options]="cities" [(ngModel)]="selectedCities" defaultLabel="Select a City" optionLabel="name" display="chip"></p-multiSelect>
+    <p-multiSelect [options]="options" [(ngModel)]="selectedValues" [defaultLabel]="'Select a ' + label"
+        optionLabel="name" display="chip" (ngModelChange)="onSelectionChange()">
+    </p-multiSelect>
 </div>

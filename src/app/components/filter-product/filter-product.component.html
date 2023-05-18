@@ -13,30 +13,10 @@
     <label><b>{{value[0]}}</b></label><label style="float: right;"><b>{{value[1]}}+</b></label>
 </div>
 
-<div>
-    <app-multi-select [label]="'Giga Galisha'" [cities]="multiSelectOptions"></app-multi-select>
+<div *ngFor="let option of filterOptions">
+    <app-multi-select [label]="option.propName" [selectedValues]="filters[option.propName]" [options]="option.selectOptions ?? []"  (selectedValuesChange)="onSelectedValuesChange($event)"></app-multi-select>
 </div>
 
-<div>
-    <app-multi-select [label]="'Minutes of conversation'" [cities]="multiSelectOptions"></app-multi-select>
-</div>
-
-<div>
-    <app-multi-select [label]="'SMS'" [cities]="multiSelectOptions"></app-multi-select>
-</div>
-
-<div>
-    <app-multi-select [label]="'validity'" [cities]="multiSelectOptions"></app-multi-select>
-</div>
-
-<div>
-    <app-multi-select [label]="'label'" [cities]="multiSelectOptions"></app-multi-select>
-</div>
-
-<div>
-    <app-multi-select [label]="'label'" [cities]="multiSelectOptions"></app-multi-select>
-</div>
-
-<button class="filtering-btn">
+<button class="filtering-btn" (click)="filter()">
     Filtering
 </button>
