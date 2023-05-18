@@ -11,14 +11,24 @@ import { FilterProductComponent } from './components/filter-product/filter-produ
 import { DialogService } from 'primeng/dynamicdialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SliderModule } from 'primeng/slider';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ChipsModule } from 'primeng/chips';
 import { ChipModule } from 'primeng/chip';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { MultiSelectComponent } from './components/multi-select/multi-select.component';
 import { TooltipModule } from 'primeng/tooltip';
+
 import { KeysPipe } from './keys.pipe';
+
+import { LogoComponent } from './shared/logo/logo.component';
+import { WizardStepsComponent } from './shared/wizard-steps/wizard-steps.component';
+import { StepsModule } from 'primeng/steps';
+import { MessageService } from 'primeng/api';
+import { ProductWizardComponent } from './pages/product-wizard/product-wizard.component';
+import { CreateProductWizardComponent } from './components/create-product-wizard/create-product-wizard.component';
+import { DropdownModule } from 'primeng/dropdown';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +38,14 @@ import { KeysPipe } from './keys.pipe';
     SearchInputComponent,
     FilterProductComponent,
     MultiSelectComponent,
+
     KeysPipe
+
+    LogoComponent,
+    WizardStepsComponent,
+    ProductWizardComponent,
+    CreateProductWizardComponent
+
   ],
   imports: [
     BrowserModule,
@@ -41,10 +58,13 @@ import { KeysPipe } from './keys.pipe';
     ChipsModule,
     InputSwitchModule,
     TooltipModule,
-    ChipModule
+    ChipModule,
+    StepsModule,
+    ReactiveFormsModule,
+    DropdownModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [DialogService],
+  providers: [DialogService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

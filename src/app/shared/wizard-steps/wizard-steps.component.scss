@@ -1,0 +1,29 @@
+.p-steps .p-component{
+    width: 10% !important;
+}
+
+
+:host{
+    ::ng-deep{
+        .p-steps-current .p-menuitem-link .p-steps-number{
+            background-color: #EAAA00 !important;
+        }
+        #previous-highlighted .p-steps-number{
+            background-color: #005675;
+            color: white;
+        }
+    }
+    
+    
+}
+.text{
+    top: 216px;
+left: 1068px;
+width: 48px;
+height: 48px;
+/* UI Properties */
+background: var(--unnamed-color-eaaa00) 0% 0% no-repeat padding-box;
+background: #EAAA00 0% 0% no-repeat padding-box;
+opacity: 1;
+border-radius: 25px;
+}

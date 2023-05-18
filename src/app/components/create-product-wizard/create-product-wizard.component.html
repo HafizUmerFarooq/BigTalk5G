@@ -1,0 +1,240 @@
+<div class="container">
+  <form #submitted="ngForm" (ngSubmit)="submitted.form.valid && submitForm()">
+    <div class="row">
+      <label>Description</label>
+      <div class="col-lg-12 description mt-2">
+        <img
+          src="../../../assets/svg/fi-rr-globe.svg"
+          (click)="this.showDescOptions = !this.showDescOptions"
+        />
+        <input
+          type="text"
+          pInputText
+          name="description"
+          [(ngModel)]="productProps.desc.value"
+          #description="ngModel"
+          required
+          (click)="this.showDescOptions = false"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            (description.touched || submitted.submitted) &&
+            !productProps.desc.value
+          "
+          >Description is required</span
+        >
+        <div *ngIf="showDescOptions" class="language">
+          <span *ngFor="let language of language">
+            <p
+              (click)="
+                productProps.desc.language = language; showDescOptions = false
+              "
+            >
+              {{ language }}
+            </p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <label>Properties</label>
+        <div class="col-12">
+          <p-chips
+            name="properties"
+            [(ngModel)]="productProps.property"
+          ></p-chips>
+        </div>
+      </div>
+    </div>
+
+    <div class="row my-2 info-row">
+      <div class="col-lg-4 col-md-4 col-sm-12 freeText">
+        <label>Free Text</label>
+        <img
+          src="../../../assets/svg/fi-rr-globe.svg"
+          (click)="this.showTextOptions = !this.showTextOptions"
+        />
+        <input
+          type="text"
+          pInputText
+          name="text"
+          [(ngModel)]="productProps.freeText.value"
+          #text="ngModel"
+          required
+          (click)="this.showTextOptions = false"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            (text.touched || submitted.submitted) &&
+            !productProps.freeText.value
+          "
+          >Free Text is required</span
+        >
+        <div *ngIf="showTextOptions" class="language">
+          <span *ngFor="let language of language">
+            <p
+              (click)="
+                productProps.freeText.language = language;
+                showTextOptions = false
+              "
+            >
+              {{ language }}
+            </p>
+          </span>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 sms">
+        <label>SMS</label>
+        <img
+          src="../../../assets/svg/fi-rr-globe.svg"
+          (click)="this.showSMScOptions = !this.showSMScOptions"
+        />
+        <input
+          type="text"
+          pInputText
+          name="sms"
+          [(ngModel)]="productProps.sms.value"
+          #sms="ngModel"
+          required
+          (click)="this.showSMScOptions = false"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            (sms.touched || submitted.submitted) && !productProps.sms.value
+          "
+          >SMS is required</span
+        >
+        <div *ngIf="showSMScOptions" class="language sms-position">
+          <span *ngFor="let language of language">
+            <p
+              (click)="
+                productProps.sms.language = language; showSMScOptions = false
+              "
+            >
+              {{ language }}
+            </p>
+          </span>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 surfing">
+        <label>surfing</label>
+        <img
+          src="../../../assets/svg/fi-rr-globe.svg"
+          (click)="this.showSurfingOptions = !this.showSurfingOptions"
+        />
+        <input
+          type="text"
+          pInputText
+          name="surfing"
+          [(ngModel)]="productProps.surfing.value"
+          #surfing="ngModel"
+          required
+          (click)="this.showSurfingOptions = false"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            (surfing.touched || submitted.submitted) &&
+            !productProps.surfing.value
+          "
+          >SMS is required</span
+        >
+        <div *ngIf="showSurfingOptions" class="language surfing-language">
+          <span *ngFor="let language of language">
+            <p
+              (click)="
+                productProps.surfing.language = language;
+                showSurfingOptions = false
+              "
+            >
+              {{ language }}
+            </p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <label>Price</label>
+        <img src="../../../assets/svg/Group 744.svg" style="float: right" />
+        <input
+          type="text"
+          pInputText
+          name="price"
+          [(ngModel)]="productProps.price"
+          #price="ngModel"
+          required
+          style="width: 100%"
+        />
+        <span
+          class="text-danger"
+          *ngIf="(price.touched || submitted.submitted) && !productProps.price"
+          >Price is required</span
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <label>Purchase price (NIS)</label>
+      </div>
+      <div class="col-6">
+        <label>Price type</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <input
+          type="text"
+          pInputText
+          name="purchasePrice"
+          [(ngModel)]="productProps.purchasePrice"
+          #purchasePrice="ngModel"
+          required
+          style="width: 100%"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            (purchasePrice.touched || submitted.submitted) &&
+            !productProps.purchasePrice
+          "
+          >Purchase price is required</span
+        >
+      </div>
+      <div class="col-6">
+        <p-dropdown
+          [(ngModel)]="productProps.priceType"
+          optionLabel="name"
+          name="priceType"
+          style="width: 100%"
+        ></p-dropdown>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 submit-btn">
+        <input type="submit" class="btn mt-3 w-100" value="Previous" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <button
+          class="btn w-100 my-2"
+          style="background-color: #005675; color: white"
+        >
+          Continued
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
