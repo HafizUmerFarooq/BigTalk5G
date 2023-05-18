@@ -39,7 +39,7 @@ import { DropdownModule } from 'primeng/dropdown';
     FilterProductComponent,
     MultiSelectComponent,
 
-    KeysPipe
+    KeysPipe,
 
     LogoComponent,
     WizardStepsComponent,
