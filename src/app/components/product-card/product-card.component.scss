@@ -82,8 +82,8 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: none;
-            max-height: 290px;
-            max-width: 160px;
+            height: 368px;
+            width: 248px;
         }
         .p-card .p-card-content{
             padding: 0;
@@ -105,6 +105,22 @@
       justify-content: center;
     }
   }
+@media (min-width: 1200px) {
+    .product-card {
+        width: 25%;
+    }
+   }
+
+@media (min-width: 1400px) {
+    .product-card {
+        width: 20%;
+    }
+   }
+@media (min-width:768px) and (max-width:990px) {
+    .product-card {
+        width: 50%;
+    }
+   }
 
 
   
